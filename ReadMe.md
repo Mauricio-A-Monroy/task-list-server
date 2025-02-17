@@ -1,20 +1,23 @@
-# ¿Qué es mi producto y para qué sirve?
-Mi producto es **Task List Server**, un servidor que permite gestionar tareas de manera sencilla y eficiente. Con este sistema, los usuarios pueden crear, ver, actualizar y eliminar tareas, facilitando la organización de actividades tanto personales como profesionales.
+# Task List Server - Organiza tu vida con facilidad
 
-# ¿Cuáles son las funcionalidades más importantes y por qué los usuarios las usarían?
-1. **Agregar tareas:** Los usuarios pueden registrar nuevas tareas con una descripción y un estado de completado.
-2. **Ver tareas:** Se pueden consultar todas las tareas almacenadas, así como buscar tareas específicas por su identificador.
-3. **Filtrar tareas:** Permite visualizar solo las tareas completadas o pendientes.
-4. **Actualizar tareas:** Los usuarios pueden modificar la descripción de una tarea o cambiar su estado.
-5. **Eliminar tareas:** Se pueden eliminar tareas que ya no sean necesarias.
+## ¿Qué es mi producto y para qué sirve?
+**Task List Server** es un sistema diseñado para ayudar a las personas y equipos a gestionar sus tareas de manera eficiente. Con esta herramienta, puedes registrar, actualizar y organizar tus pendientes de forma estructurada, facilitando el control de tus actividades diarias. Ya sea para uso personal o profesional, este servidor te permite mantener un seguimiento claro de tus objetivos y pendientes.
 
-Estas funcionalidades permiten que cualquier persona pueda administrar su lista de tareas de manera práctica y estructurada.
+## ¿Cuáles son las funcionalidades más importantes y por qué los usuarios las usarían?
+1. **Agregar tareas:** Registra nuevas tareas con descripciones claras y estados de completado.
+2. **Ver tareas:** Consulta la lista de tareas almacenadas y busca tareas específicas fácilmente.
+3. **Filtrar tareas:** Visualiza solo las tareas completadas o las que están pendientes, optimizando la organización.
+4. **Actualizar tareas:** Modifica descripciones y estados para reflejar cambios en tu planificación.
+5. **Eliminar tareas:** Borra tareas que ya no sean necesarias para mantener tu lista limpia y organizada.
 
-# ¿Qué tecnologías usaste y por qué?
-- **Node.js y Express.js:** Para crear un servidor rápido y eficiente, con una estructura simple y flexible.
-- **JavaScript:** Como lenguaje de programación principal, fácil de entender y ampliamente utilizado en el desarrollo web.
-- **JSON:** Para el intercambio de datos entre el cliente y el servidor, permitiendo una comunicación clara y estandarizada.
-- **Git y GitHub:** Para el control de versiones y la colaboración en el desarrollo del proyecto.
+Con estas funcionalidades, los usuarios pueden manejar sus pendientes de manera práctica, asegurando que nada importante quede olvidado.
 
-Este conjunto de tecnologías hace que **Task List Server** sea una solución ligera, rápida y fácil de implementar.
+## ¿Qué tecnologías usaste y por qué?
+- **Node.js y Express.js:** Proporcionan un servidor rápido, escalable y eficiente.
+- **JavaScript:** Un lenguaje versátil y fácil de aprender, ampliamente utilizado en la web.
+- **JSON:** Facilita el intercambio de datos entre el servidor y otras aplicaciones, asegurando compatibilidad y claridad.
+- **Git y GitHub:** Para el control de versiones y colaboración en el desarrollo del proyecto.
 
+Gracias a estas tecnologías, **Task List Server** es una solución ligera, accesible y efectiva para la gestión de tareas.
+
+---
