@@ -2,27 +2,44 @@ const { Router } = require("express");
 const router = Router();
 const tasks = require("../tasks");
 
-router.post("/task", function (req, res) {
+// Middleware de validación para POST y PUT
+router.use(["/task", "/task/:taskId"], function (req, res, next) {
+    if (req.method !== "POST" && req.method !== "PUT") {
+        return next(); // No afecta otras rutas o métodos
+    }
+
     const { id, isCompleted, description } = req.body;
 
-    // Validaciones básicas
+    // Validar si el body está vacío
+    if (Object.keys(req.body).length === 0) {
+        return res.status(400).json({ error: "Body of request is empty" });
+    }
+
+    // Validar campos requeridos
     if (id === undefined || isCompleted === undefined || description === undefined) {
         return res.status(400).json({ error: "Missing required fields: id, isCompleted, and description." });
     }
 
+    // Validar tipos de datos
     if (typeof id !== "number" || typeof isCompleted !== "boolean" || typeof description !== "string") {
         return res.status(400).json({ error: "Invalid data format. Ensure id is a number, isCompleted is a boolean, and description is a string." });
     }
 
-    const task = tasks.find(t => t.id === id);
-
-    if (task){
-        return res.status(400).json({ error: "Id is already use, please choose a different one." });
+    // Validar ID único solo en POST (PUT no necesita esta validación)
+    if (req.method === "POST" && tasks.find(t => t.id === id)) {
+        return res.status(400).json({ error: "Id is already in use, please choose a different one." });
     }
 
-    if (description.length === 0){
-        return res.status(400).json({ error: "Description is empy, please provide a valid description." });
+    // Validar que la descripción no esté vacía
+    if (description.trim().length === 0) {
+        return res.status(400).json({ error: "Description is empty, please provide a valid description." });
     }
+
+    next(); // Continuar con la solicitud
+});
+
+router.post("/task", function (req, res) {
+    const { id, isCompleted, description } = req.body;
 
     // Crear nueva tarea
     const newTask = { id, isCompleted, description };
